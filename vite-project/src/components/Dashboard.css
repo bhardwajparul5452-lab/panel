@@ -1,0 +1,21 @@
+.page {
+  min-height: 100vh;
+  color: #28233d;
+}
+.dashboard-content { padding: 27px 30px 40px 22px; }
+.welcome { display: flex; justify-content: space-between; align-items: center; margin-bottom: 19px; }
+.welcome h1 { margin: 0; font-size: 23px; line-height: 1.2; letter-spacing: -.5px; }
+.welcome p, .panel-head p { margin: 5px 0 0; color: #898496; font-size: 12px; }
+.welcome button { border: 1px solid #e5e2ec; border-radius: 20px; background: #fff; color: #5e596c; padding: 9px 14px; font: inherit; font-size: 12px; }
+.cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 13px; }
+.metric, .panel { background: #fff; border: 1px solid #e8e5ef; border-radius: 16px; box-shadow: 0 5px 12px #4033640b; }
+.metric { position: relative; min-height: 125px; padding: 18px; }
+.metric-icon { display: grid; place-items: center; width: 39px; height: 39px; border-radius: 15px; margin-bottom: 14px; font-size: 19px; }
+.metric-icon.purple { color: #7542ec; background: #f1edff; }.metric-icon.green { color: #18a45b; background: #dcf8e8; }.metric-icon.orange { color: #ed9a12; background: #fff0d0; }
+.metric p { color: #665f73; font-size: 12px; margin: 0 0 3px; }.metric strong { display: block; color: #28233d; font-size: 22px; line-height: 1.1; }.metric small { color: #8c8798; font-size: 10px; }
+.change { position: absolute; top: 19px; right: 13px; padding: 4px 8px; border-radius: 15px; background: #def8e8; color: #1b9b5c; font-size: 10px; }.change.negative { background: #ffe6e8; color: #e93448; }
+.dashboard-grid { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(260px, .9fr); gap: 13px; margin-top: 21px; }
+.panel-head { display: flex; justify-content: space-between; align-items: center; padding: 15px 18px; border-bottom: 1px solid #efedf3; }.panel-head h3 { margin: 0; font-size: 14px; }.tabs { display: flex; gap: 3px; align-items: center; background: #f4f1fa; border-radius: 18px; padding: 3px; font-size: 10px; }.tabs > * { padding: 7px 10px; color: #756f82; }.tabs b { border-radius: 15px; background: #713de8; color: #fff; }.chart { position: relative; height: 270px; padding: 18px 21px 10px 65px; box-sizing: border-box; }.chart:before { content: ""; position: absolute; inset: 24px 28px 35px 64px; background: repeating-linear-gradient(to bottom, transparent 0 56px, #e9e5f0 57px 58px); }.chart svg { position: relative; z-index: 1; width: 100%; height: 220px; overflow: visible; }.line { fill: none; stroke: #713de8; stroke-width: 3; }.area { fill: url(#area); }.points circle { fill: #713de8; stroke: #fff; stroke-width: 2; }.y-labels { position: absolute; left: 17px; top: 18px; height: 190px; display: flex; flex-direction: column; justify-content: space-between; color: #817b90; font-size: 10px; }.x-labels { position: absolute; left: 64px; right: 25px; bottom: 4px; display: flex; justify-content: space-between; color: #817b90; font-size: 10px; }
+.health-items { padding: 17px 18px 8px; }.health-row { margin-bottom: 15px; }.health-row > div:first-child { display: flex; justify-content: space-between; font-size: 12px; }.health-row b { color: #3a344b; }.progress { height: 7px; border-radius: 5px; background: #f0eef4; margin-top: 7px; overflow: hidden; }.progress i { display: block; height: 100%; border-radius: 5px; }.progress .green { background: #20a45a; }.progress .purple { background: #713de8; }.progress .orange { background: #ed9700; }.progress .red { background: #ed1f39; }.health-footer { margin: 4px 18px 18px; padding: 14px; border-radius: 13px; background: #f1edff; }.health-footer b, .health-footer span { display: block; }.health-footer b { color: #713de8; font-size: 12px; }.health-footer span { color: #827b95; font-size: 10px; margin-top: 3px; }
+@media (max-width: 950px) { .cards { grid-template-columns: repeat(2, 1fr); }.dashboard-grid { grid-template-columns: 1fr; } }
+@media (max-width: 550px) { .dashboard-content { padding: 20px 12px; }.welcome h1 { font-size: 18px; }.cards { grid-template-columns: 1fr; }.metric { min-height: 105px; }.panel-head { align-items: flex-start; gap: 10px; flex-direction: column; }.chart { padding-left: 52px; }.chart:before { left: 52px; } }

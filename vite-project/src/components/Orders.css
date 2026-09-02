@@ -1,0 +1,11 @@
+table {
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+}
+td, th {
+  padding: 12px;
+}
+.processing {
+  color: blue;
+}

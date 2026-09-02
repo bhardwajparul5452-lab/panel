@@ -1,0 +1,22 @@
+.workspace-bar { height: 43px; background: #492296; color: #f8f8fa; display: flex; align-items: center; gap: 18px; padding: 0 18px; font-size: 12px; }
+.spark { color: #692089; margin-right: 6px; }
+.workspace-pill, .preview-pill { border: 1px solid #472a92; border-radius: 14px; padding: 6px 10px; color: #ddd; }
+.preview-pill { color: #82a9ff; border-color: #612692; }
+.workspace-title { margin: auto; color: #eee; }
+.workspace-bar button { border: 0; border-radius: 15px; padding: 6px 13px; background: #5b2691; color: white; font: inherit; }
+.workspace-bar .publish { background: #6d3aee; }
+.header { height: 85px; padding: 0 30px 0 22px; display: flex; justify-content: space-between; align-items: center; background: #fff; border-bottom: 1px solid #eeeef3; }
+.breadcrumbs b, .breadcrumbs span { display: block; }
+.breadcrumbs b { color: #5a3fde; font-size: 20px; }
+.breadcrumbs span { color: #5e36d5; font-size: 11px; margin-top: 2px; }
+.right { display: flex; gap: 14px; align-items: center; }
+.search { width: 235px; height: 36px; display: flex; align-items: center; gap: 7px; border: 1px solid #e8e5ed; background: #f7f5fa; border-radius: 20px; padding: 0 12px; color: #8c8798; box-shadow: 0 2px 4px #33254c12; }
+.search input { width: 100%; border: 0; outline: 0; background: transparent; color: #444; font: inherit; font-size: 12px; }
+.notification { position: relative; font-size: 21px; color: #481c6f; }
+.notification i { position: absolute; top: -4px; right: -7px; display: grid; place-items: center; width: 15px; height: 15px; border-radius: 50%; background: #713de8; color: white; font: 10px sans-serif; font-style: normal; }
+.help { border: 1px solid #b9b5c4; border-radius: 50%; width: 15px; height: 15px; text-align: center; color: #777285; font-size: 11px; }
+.avatar { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: #713de8; color: white; font-weight: 700; font-size: 11px; }
+.profile b, .profile p { display: block; }
+.profile b { color: #402aa2; font-size: 12px; }
+.profile p { color: #b29fec; font-size: 10px; }
+@media (max-width: 800px) { .workspace-bar { padding-inline: 10px; gap: 7px; } .workspace-bar > b, .workspace-pill { display: none; } .header { padding-inline: 15px; } .profile, .right > span:last-child { display: none; } .search { width: 150px; } }

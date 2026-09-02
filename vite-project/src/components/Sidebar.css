@@ -1,0 +1,32 @@
+.sidebar {
+  position: fixed;
+  z-index: 2;
+  width: 246px;
+  height: 100vh;
+  box-sizing: border-box;
+  background: #f7f4f9;
+  border-right: 1px solid #ebe9f1;
+  color: #d1cde0;
+  padding: 24px 10px 18px;
+  display: flex;
+  flex-direction: column;
+}
+.brand { display: flex; align-items: center; gap: 11px; padding: 0 12px 22px; border-bottom: 1px solid #32195c; color: s#524482; }
+.brand-mark { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: #713de8; color: #fff; font-size: 20px; }
+.brand b, .brand small { display: block; }
+.brand b { font-size: 13px; }
+.brand small { color: #5a31d7; font-size: 11px; margin-top: 2px; }
+.sidebar ul { list-style: none; padding: 14px 0; margin: 0; }
+.sidebar li { margin: 2px 0; }
+.sidebar a { display: flex; align-items: center; gap: 13px; padding: 10px 12px; border-radius: 20px; color: #6c687b; text-decoration: none; font-size: 13px; }
+.sidebar li.active a { background: #624eb5; color: #2b0d0d; box-shadow: 0 4px 8px #713de833; }
+.sidebar a:hover { background: #583fa8; color: #0c0716; }
+.menu-icon { width: 15px; text-align: center; font-size: 17px; line-height: 1; }
+.logout { margin-top: auto; padding: 13px 12px; background: transparent; border: 0; border-top: 1px solid #eeeef3; color: #e9364f; text-align: left; font: inherit; font-size: 13px; }
+.logout span { margin-right: 10px; font-size: 20px; vertical-align: -2px; }
+@media (max-width: 800px) {
+  .sidebar { width: 82px; padding-inline: 10px; }
+  .brand { justify-content: center; padding-inline: 0; }
+  .brand > span:last-child, .sidebar a > span:last-child, .logout { display: none; }
+  .sidebar a { justify-content: center; padding-inline: 0; }
+}

@@ -1,0 +1,11 @@
+.app {
+  min-height: 100vh;
+  background: #f8f7fb;
+}
+.main {
+  margin-left: 246px;
+  min-height: 100vh;
+}
+@media (max-width: 800px) {
+  .main { margin-left: 82px; }
+}

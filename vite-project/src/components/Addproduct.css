@@ -1,0 +1,827 @@
+/* =========================================================
+   ADD PRODUCT MODAL
+   Everything for this component is contained in this file.
+   ========================================================= */
+
+
+/* ================= OVERLAY ================= */
+
+.add-product-overlay {
+  position: fixed;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.72);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  z-index: 99999;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+}
+
+
+/* ================= MODAL ================= */
+
+.add-product-modal {
+  width: 720px;
+
+  max-width: calc(100vw - 40px);
+
+  height: 830px;
+
+  max-height: calc(100vh - 40px);
+
+  background: #ffffff;
+
+  border-radius: 17px;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.38);
+}
+
+
+/* ================= HEADER ================= */
+
+.add-product-header {
+  min-height: 91px;
+
+  padding:
+    25px
+    28px
+    14px
+    28px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  flex-shrink: 0;
+}
+
+
+.add-product-header h2 {
+  margin: 0;
+
+  font-size: 21px;
+
+  line-height: 1.3;
+
+  font-weight: 700;
+
+  letter-spacing: -0.25px;
+
+  color: #17131d;
+}
+
+
+.add-product-header p {
+  margin:
+    5px
+    0
+    0;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  color: #8b8297;
+}
+
+
+.add-product-header p span {
+  color: #817689;
+}
+
+
+/* CLOSE BUTTON */
+
+.add-product-close {
+  width: 30px;
+  height: 30px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #77717d;
+
+  font-size: 28px;
+
+  line-height: 28px;
+
+  font-weight: 300;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 6px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.add-product-close:hover {
+  background: #f2eff5;
+
+  color: #28222e;
+}
+
+
+/* ================= FORM ================= */
+
+.add-product-form {
+  flex: 1;
+
+  overflow-y: auto;
+
+  padding:
+    0
+    27px
+    30px
+    27px;
+}
+
+
+/* ================= SCROLLBAR ================= */
+
+.add-product-form::-webkit-scrollbar {
+  width: 12px;
+}
+
+
+.add-product-form::-webkit-scrollbar-track {
+  background: #f6f6f6;
+}
+
+
+.add-product-form::-webkit-scrollbar-thumb {
+  background: #999999;
+
+  border-radius: 10px;
+
+  border:
+    3px solid
+    #f6f6f6;
+}
+
+
+.add-product-form::-webkit-scrollbar-thumb:hover {
+  background: #777777;
+}
+
+
+/* ================= FORM FIELD ================= */
+
+.add-product-field {
+  flex: 1;
+
+  min-width: 0;
+
+  margin-bottom: 18px;
+
+  position: relative;
+}
+
+
+.add-product-field.full {
+  width: 100%;
+}
+
+
+.add-product-field label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 15px;
+
+  line-height: 1.3;
+
+  font-weight: 500;
+
+  color: #17131d;
+}
+
+
+.add-product-field label span {
+  color: #17131d;
+}
+
+
+/* ================= INPUT ================= */
+
+.add-product-field input,
+.add-product-field textarea {
+  width: 100%;
+
+  border:
+    1px solid
+    #e2dfe7;
+
+  background: #ffffff;
+
+  outline: none;
+
+  border-radius: 12px;
+
+  color: #5f586b;
+
+  font-size: 15px;
+
+  font-weight: 400;
+
+  font-family: inherit;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.add-product-field input {
+  height: 43px;
+
+  padding:
+    0
+    14px;
+}
+
+
+.add-product-field textarea {
+  min-height: 83px;
+
+  padding:
+    11px
+    14px;
+
+  resize: vertical;
+
+  line-height: 1.5;
+}
+
+
+.add-product-field input::placeholder,
+.add-product-field textarea::placeholder {
+  color: #766e84;
+
+  opacity: 1;
+}
+
+
+/* INPUT FOCUS */
+
+.add-product-field input:focus,
+.add-product-field textarea:focus {
+  border-color: #6935d8;
+
+  box-shadow:
+    0 0 0 1px
+    #6935d8;
+}
+
+
+/* ================= TWO COLUMNS ================= */
+
+.add-product-row {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  column-gap: 17px;
+}
+
+
+/* ================= CATEGORY SELECT ================= */
+
+.add-product-select-wrapper {
+  position: relative;
+
+  width: 100%;
+}
+
+
+.add-product-select {
+  width: 100%;
+
+  height: 43px;
+
+  padding:
+    0
+    13px;
+
+  border:
+    1px solid
+    #e2dfe7;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  color: #5f586b;
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  text-align: left;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.add-product-select:hover {
+  border-color: #ccc5d5;
+}
+
+
+.add-product-select.select-active {
+  border-color: #6935d8;
+
+  box-shadow:
+    0 0 0 1px
+    #6935d8;
+}
+
+
+.select-arrow {
+  font-size: 17px;
+
+  color: #77717d;
+
+  line-height: 1;
+
+  transition:
+    transform 0.2s ease;
+}
+
+
+.select-arrow.arrow-up {
+  transform: rotate(180deg);
+}
+
+
+/* ================= DROPDOWN ================= */
+
+.add-product-dropdown {
+  position: absolute;
+
+  top: calc(100% + 5px);
+
+  left: 0;
+
+  width: 100%;
+
+  max-height: 220px;
+
+  overflow-y: auto;
+
+  background: #ffffff;
+
+  border:
+    1px solid
+    #e2dfe7;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 12px 30px
+    rgba(0, 0, 0, 0.14);
+
+  z-index: 1000;
+
+  padding: 5px;
+}
+
+
+.add-product-dropdown::-webkit-scrollbar {
+  width: 7px;
+}
+
+
+.add-product-dropdown::-webkit-scrollbar-thumb {
+  background: #c5c0c9;
+
+  border-radius: 10px;
+}
+
+
+.dropdown-option {
+  width: 100%;
+
+  border: 0;
+
+  background: transparent;
+
+  padding:
+    10px
+    9px;
+
+  border-radius: 7px;
+
+  color: #403947;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+
+.dropdown-option:hover {
+  background: #f2edff;
+
+  color: #5c24c8;
+}
+
+
+.dropdown-option.selected-option {
+  background: #f3efff;
+
+  color: #5c24c8;
+
+  font-weight: 500;
+}
+
+
+/* ================= IMAGE UPLOAD ================= */
+
+.image-field {
+  margin-top: 1px;
+}
+
+
+.product-upload-box {
+  width: 100%;
+
+  min-height: 133px;
+
+  border:
+    1px dashed
+    #ddd7e6;
+
+  border-radius: 17px;
+
+  background: #ffffff;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+.product-upload-box:hover {
+  background: #fbf9ff;
+
+  border-color: #9272dc;
+}
+
+
+.upload-image-icon {
+  width: 28px;
+  height: 28px;
+
+  margin-bottom: 7px;
+
+  color: #6836d8;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+.upload-main-text {
+  color: #191521;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  line-height: 1.4;
+
+  margin-bottom: 2px;
+}
+
+
+.upload-help-text {
+  color: #887f98;
+
+  font-size: 13px;
+
+  line-height: 1.4;
+}
+
+
+/* ================= IMAGE PREVIEWS ================= */
+
+.uploaded-images {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 12px;
+}
+
+
+.uploaded-image {
+  position: relative;
+
+  width: 76px;
+  height: 76px;
+
+  border-radius: 9px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    #e0dce5;
+
+  background: #f6f4f8;
+}
+
+
+.uploaded-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+.remove-image {
+  position: absolute;
+
+  top: 4px;
+  right: 4px;
+
+  width: 20px;
+  height: 20px;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background:
+    rgba(0, 0, 0, 0.65);
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  line-height: 18px;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+.remove-image:hover {
+  background:
+    rgba(0, 0, 0, 0.85);
+}
+
+
+/* ================= ACTION BUTTONS ================= */
+
+.add-product-actions {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 8px;
+
+  padding-top: 20px;
+
+  border-top:
+    1px solid
+    #eeeaf1;
+}
+
+
+.add-product-cancel,
+.add-product-submit {
+  height: 43px;
+
+  padding:
+    0
+    22px;
+
+  border-radius: 10px;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+
+.add-product-cancel {
+  border:
+    1px solid
+    #ddd8e4;
+
+  background: #ffffff;
+
+  color: #4c4555;
+}
+
+
+.add-product-cancel:hover {
+  background: #f6f4f8;
+}
+
+
+.add-product-submit {
+  border:
+    1px solid
+    #5d20ce;
+
+  background: #5d20ce;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 4px 10px
+    rgba(93, 32, 206, 0.2);
+}
+
+
+.add-product-submit:hover {
+  background: #4f18b9;
+
+  border-color: #4f18b9;
+}
+
+
+.add-product-submit:active,
+.add-product-cancel:active {
+  transform: scale(0.98);
+}
+
+
+/* ================= NUMBER INPUT ================= */
+
+.add-product-field input[type="number"]::-webkit-inner-spin-button,
+.add-product-field input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 700px) {
+
+  .add-product-overlay {
+    padding: 10px;
+  }
+
+  .add-product-modal {
+    width: 100%;
+
+    max-width: 100%;
+
+    height: calc(100vh - 20px);
+
+    max-height: calc(100vh - 20px);
+
+    border-radius: 14px;
+  }
+
+
+  .add-product-header {
+    padding:
+      22px
+      20px
+      14px;
+  }
+
+
+  .add-product-form {
+    padding:
+      0
+      20px
+      25px;
+  }
+
+
+  .add-product-row {
+    grid-template-columns: 1fr;
+
+    column-gap: 0;
+  }
+
+
+  .add-product-actions {
+    padding-bottom: 5px;
+  }
+
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 450px) {
+
+  .add-product-header h2 {
+    font-size: 19px;
+  }
+
+  .add-product-header p {
+    font-size: 13px;
+  }
+
+  .add-product-actions {
+    justify-content: stretch;
+  }
+
+  .add-product-cancel,
+  .add-product-submit {
+    flex: 1;
+  }
+
+}
